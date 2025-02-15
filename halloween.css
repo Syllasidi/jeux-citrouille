@@ -1,0 +1,166 @@
+html{
+	height: 100%;
+}
+
+body{
+	background-color: black;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+#counter{
+	color: red;
+	float: right;
+	font-size: 3em;
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+#gameOver{
+	position: absolute;
+	color: red;
+	text-align: center;
+	font-size: 10em;
+	font-family: sans-serif;
+	width: 100%;
+	font-weight: bold;
+}
+
+.pumpkin{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	animation: pumpkinpopup 1s;
+}
+
+@keyframes pumpkinpopup {
+	from {
+		transform: scale(0);
+	}
+    to {
+        transform: scale(1); 
+    }
+}
+
+.pumpkin > *{
+	background-color: #F26B0F;
+	position: absolute;
+}
+
+.stem{
+	background-color: brown;
+	width: 20px;
+	height: 30px;
+	left: 140px;
+	top: 25px;
+	border-radius: 5px;
+}
+
+.left-pumpkin, .right-pumpkin{
+	width: 150px;
+	height: 200px;
+	top: 50px;
+	border-radius: 150px / 200px;
+}
+
+.left-pumpkin{
+	left: 20px;
+}
+
+.middle-pumpkin{
+	left: 100px;
+	top: 45px;
+	width: 100px;
+	height: 210px;
+	border-radius: 30px;
+}
+
+.right-pumpkin{
+	left: 130px;
+}
+
+.mouth{
+	background-color: black;
+	left: 60px;
+	top: 135px;
+	width: 180px;
+	height: 100px;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+
+.lip{
+	left: 60px;
+	top: 95px;
+	width: 180px;
+	height: 80px;
+	border-radius: 600px / 300px;
+}
+
+.tooth{
+	width: 30px;
+	height: 30px;
+}
+
+.t1{
+	left:  135px;
+	top:  165px;
+}
+
+.t2{
+	left:  110px;
+	top:  210px;	
+}
+
+.t3{
+	left:  160px;
+	top:  210px;	
+}
+
+.eye{
+	background-color: black;
+	width: 60px;
+	height: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	top: 125px;
+}
+
+.e1{
+	left: 70px;
+	transform: rotate(25deg); 
+}
+
+.e2{
+	left: 170px;
+	transform: rotate(-25deg); 
+}
+
+.nose{
+	left: 133px;
+	top: 135px;
+	height: 0px;
+	width: 0px;
+	border-right : 17px solid transparent;
+	border-bottom : 30px solid black;
+	border-left : 17px solid transparent;
+}
+
+.particle{
+	position: absolute;
+	background-color: #F26B0F;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	animation: pumpkinsplosion .5s linear;
+}
+
+@keyframes pumpkinsplosion {
+	from {    
+        opacity: 1;
+        transform: translate(0px);
+    }
+    to {
+    	opacity: 0;
+    }
+}
